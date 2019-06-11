@@ -2,12 +2,98 @@
 <html>
 	<head>
 		<title>Please fill out</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link href="stylesheet.css" rel="stylesheet" type="text/css">
 	</head>
 
 	<body>
-		<main>
-			<h1>Survey Form</h1>	
-		</main>
+		<div id="main">
+			<h1 class="display-4">Survey Form</h1>
+            <p id="description">Please help us improve freeCodeCamp!</p>
+            <form id="main-form">
+                <label id="name-label" for="name" class="left">*Name:</label>
+                <input id="name" type="text" placeholder="Enter your name here..." class="right form-control" required>
+                
+                <label id="email-label" for="email" class="left">*E-mail:</label>
+				<input id="email" type="email" placeholder="Enter your e-mail address..." class="right form-control" required>
+                
+                <label id="age" for="age" class="left">*Age:</label>
+                <input id="age" type="number" min=0 max=120 placeholder="Enter your age..." class="right form-control" required>
+                
+                <label id="role-label" for="role" class="left">Which option best describes your current role?</label>
+                <select id="role" class="right form-control">
+                    <option value="student">Student</option>
+                    <option value="job">Full-time Job</option>
+                    <option value="learner">Full-time Learner</option>
+                    <option value="notsay">Prefer not to say</option>
+                </select>
+                
+                <label id="recommend-label"  for="recommend" class="left">How likely are you to recommend freeCodeCamp to a friend?</label>
+                <div id="recommend" class="right">
+                    <label for="definitely">
+                        <input id="definitely" type="radio" name="likelihood"> Definitely
+                    </label>
+                    <label for="maybe">
+                        <input id="maybe" type="radio" name="likelihood"> Maybe
+                    </label>
+                    <label for="notsure">
+                        <input id="notsure" type="radio" name="likelihood"> Not sure
+                    </label>
+                </div>
+                
+                <label id="like-label" for="like" class="left">What do you like most about FCC?</label>
+                <select id="like" class="right form-control">
+                    <option value="challenges">Challenges</option>
+                    <option value="projects">Projects</option>
+                    <option value="community">Community</option>
+                    <option value="opensource">Open Source</option>
+                </select>
+                
+                <label id="improve-label" for="improve" class="left">Things should be improved in the future (Check all that apply):</label>
+                <div id="improve" class="right">
+                    <label for="frontend">
+                        <input id="frontend" type="checkbox" name="improv" value="frontend"> Front-end Projects
+                    </label>
+                    <label for="backend">
+                        <input id="backend" type="checkbox" name="improv" value="backend"> Back-end Projects
+                    </label>
+                    <label for="dataviz">
+                        <input id="dataviz" type="checkbox" name="improv" value="datviz"> Data Visualization
+                    </label>
+                    <label for="challenges">
+                        <input id="challenges" type="checkbox" name="imrov" value="challenges"> Challenges
+                    </label>
+                    <label for="opensource">
+                        <input id="opensource" type="checkbox" name="improv" value="opensource"> Open Source Community
+                    </label>
+                    <label for="helprooms">
+                        <input id="helprooms" type="checkbox" name="improv" value="helprooms"> Gitter Help Rooms 
+                    </label>
+                    <label for="videos">
+                        <input id="videos" type="checkbox" name="improv" value="videos"> Videos
+                    </label>
+                    <label for="meetups">
+                        <input id="meetups" type="checkbox" name="improv" value="meetups"> City Meetups
+                    </label>
+                    <label for="wiki">
+                        <input id="wiki" type="checkbox" name="improv" value="wiki"> Wiki
+                    </label>
+                    <label for="forum">
+                        <input id="forum" type="checkbox" name="improv" value="forum"> Forum
+                    </label>
+                    <label for="addcourses">
+                        <input id="addcourses" type="checkbox" name="improv" value="addcourses"> Additional Courses
+                    </label>
+                </div>
+                
+                <label id="comments" for="comments" class="left">Any comments or suggestions?</label>
+                <textarea class="right form-control" placeholder="Enter your comment here..."></textarea>
+                
+                <button type="submit" id="submit-btn" class="btn btn-primary"><i class="fa fa-paper-plane"></i>  Submit</button>
+            </form>
+            
+            
+		</div>
 	</body>
 </html>
